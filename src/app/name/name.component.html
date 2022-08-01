@@ -1,0 +1,12 @@
+<p>List</p>
+<input (keyup)="nameService.onInput($event)" value={{nameService.editName}}>
+<button (click)="nameService.onPush()">Add to list</button>
+
+<ul>
+    <li *ngFor="let item of nameService.list" value={{item}}>{{item}}</li>
+</ul>
+
+<p>e-List</p>
+<ul>
+    <li *ngFor="let item of nameService.eList" value={{item}}>{{item}}</li>
+</ul>
